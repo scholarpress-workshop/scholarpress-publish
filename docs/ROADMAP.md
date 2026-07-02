@@ -12,7 +12,7 @@ One round = one testable feature delivered end-to-end.
 | 1 | 4 | `/validate` endpoint (diss-check) | ✅ | same | same | 1 | Task 5 — subprocess, accepts exit 1 (failures OK), exit 2 = error |
 | 1 | 5 | Error handling + Docker | ✅ | same | same | - | Task 6 — tracing::error!, request ID, .dockerignore |
 | 2 | 6 | Backend: GET /institutions endpoint | ✅ | same | [plan](../superpowers/plans/2026-07-02-nextjs-frontend.md) | - | Task 1 |
-| 2 | 6 | Next.js scaffold + institution selector | ⬜ | same | same | - | Task 2 |
+| 2 | 6 | Next.js scaffold + institution selector | ✅ | same | same | - | Task 2 |
 | 2 | 7 | Streaming chat UI (Vercel AI SDK) | ⬜ | same | same | - | Task 3 |
 | 2 | 8 | Wire tools to Rust service | ⬜ | same | same | - | Task 4 |
 | 2 | 9 | File upload flow | ⬜ | same | same | - | Task 5 |
