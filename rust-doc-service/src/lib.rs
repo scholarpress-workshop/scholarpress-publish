@@ -1,5 +1,6 @@
 pub mod config;
 mod error;
+pub mod extract;
 pub mod institutions;
 pub mod routes;
 

@@ -15,3 +15,7 @@ thiserror = "1"
 uuid = { version = "1", features = ["v4"] }
 serde_yaml = "0.9"
 xberg = "5.0.0-rc.32"
+kreuzberg = { version = "5.0.0-rc.32", features = ["pdf"] }
+
+[dev-dependencies]
+reqwest = { version = "0.12", features = ["multipart", "json"] }
