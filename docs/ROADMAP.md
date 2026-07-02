@@ -13,8 +13,8 @@ One round = one testable feature delivered end-to-end.
 | 1 | 5 | Error handling + Docker | ✅ | same | same | - | Task 6 — tracing::error!, request ID, .dockerignore |
 | 2 | 6 | Backend: GET /institutions endpoint | ✅ | same | [plan](../superpowers/plans/2026-07-02-nextjs-frontend.md) | - | Task 1 |
 | 2 | 6 | Next.js scaffold + institution selector | ✅ | same | same | - | Task 2 |
-| 2 | 7 | Streaming chat UI (Vercel AI SDK) | ⬜ | same | same | - | Task 3 |
-| 2 | 8 | Wire tools to Rust service | ⬜ | same | same | - | Task 4 |
+| 2 | 7 | Streaming chat UI (Vercel AI SDK v7) | ✅ | same | same | - | Task 3 |
+| 2 | 8 | Wire tools to Rust service | ✅ | same | same | - | Task 4 |
 | 2 | 9 | File upload flow | ⬜ | same | same | - | Task 5 |
 | 2 | 10 | Right panel (preview + violations) | ⬜ | same | same | - | Task 6 |
 | 2 | 11 | Session persistence (Postgres) | ⬜ | same | same | - | Task 7 |
