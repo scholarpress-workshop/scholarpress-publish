@@ -15,7 +15,7 @@ One round = one testable feature delivered end-to-end.
 | 2 | 6 | Next.js scaffold + institution selector | ✅ | same | same | - | Task 2 |
 | 2 | 7 | Streaming chat UI (Vercel AI SDK v7) | ✅ | same | same | - | Task 3 |
 | 2 | 8 | Wire tools to Rust service | ✅ | same | same | - | Task 4 |
-| 2 | 9 | File upload flow | ⬜ | same | same | - | Task 5 |
-| 2 | 10 | Right panel (preview + violations) | ⬜ | same | same | - | Task 6 |
-| 2 | 11 | Session persistence (Postgres) | ⬜ | same | same | - | Task 7 |
-| 2 | 12 | Deployment config + polish | ⬜ | same | same | - | Task 8 |
+| 2 | 9 | File upload flow | ✅ | same | same | - | Task 5 |
+| 2 | 10 | Right panel (preview + violations) | ✅ | same | same | - | Task 6 |
+| 2 | 11 | Session persistence (Postgres) | ✅ | same | same | - | Task 7 |
+| 2 | 12 | Deployment config + polish | ✅ | same | same | - | Task 8 |
