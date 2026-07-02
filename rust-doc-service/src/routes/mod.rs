@@ -18,6 +18,6 @@ pub fn router() -> Router<Registry> {
         .route("/validate", post(validate::handler))
         .route("/health", get(|| async { "ok" }))
         .route("/institutions", get(institutions::handler))
-        .route("/institutions/{id}/spec", get(spec::handler))
-        .route("/institutions/{id}/template", get(template::handler))
+        .route("/institutions/:id/spec", get(spec::handler))
+        .route("/institutions/:id/template", get(template::handler))
 }
