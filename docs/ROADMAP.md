@@ -19,3 +19,11 @@ One round = one testable feature delivered end-to-end.
 | 2 | 10 | Right panel (preview + violations) | ✅ | same | same | - | Task 6 |
 | 2 | 11 | Session persistence (Postgres) | ✅ | same | same | - | Task 7 |
 | 2 | 12 | Deployment config + polish | ✅ | same | same | - | Task 8 |
+| 3 | 13 | Fix: PDF preview (react-pdf → iframe) | ✅ | — | — | — | react-pdf v10 + pdfjs-dist incompatible with Next.js webpack; switched to browser native iframe |
+| 3 | 14 | Wire tool results to UI state | ✅ | — | — | — | In-memory store, /api/state endpoint, tool callbacks bubble compile/validate results to right panel |
+| 3 | 15 | File upload → auto-extract in chat | ✅ | — | — | — | FileUpload integrated into ChatPanel; auto-extracts on drop and sends content to LLM |
+| 3 | 16 | Fix: DOCX extraction | ✅ | — | — | — | Added `office` feature to kreuzberg in Cargo.toml |
+| 3 | 17 | Fix: institutions path resolution | ✅ | — | — | — | Default path now resolves relative to CARGO_MANIFEST_DIR |
+| 3 | 18 | Switch from npm to bun | ✅ | — | — | — | Faster installs; Dockerfile uses oven/bun for deps/builder |
+
+(End of file — total 24 lines)
