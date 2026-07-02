@@ -14,6 +14,11 @@ pub fn load() -> AppConfig {
             .expect("PORT must be a number"),
         institutions_path: std::env::var("INSTITUTIONS_PATH")
             .map(PathBuf::from)
-            .unwrap_or_else(|_| PathBuf::from("institutions")),
+            .unwrap_or_else(|_| {
+                PathBuf::from(env!("CARGO_MANIFEST_DIR"))
+                    .parent()
+                    .expect("No parent of manifest dir")
+                    .join("institutions")
+            }),
     }
 }
