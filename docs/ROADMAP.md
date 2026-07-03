@@ -1,6 +1,6 @@
 # Roadmap — format-my-dissertation
 
-**Updated:** 2026-07-02 (Phase 4 added)
+**Updated:** 2026-07-03 (Phase 7 — extraction store resilience)
 
 One round = one testable feature delivered end-to-end.
 
@@ -31,5 +31,9 @@ One round = one testable feature delivered end-to-end.
 | 4 | 22 | GET /institutions/:id/template endpoint | ✅ | same | same | — | Returns all .typ files recursively with contents |
 | 4 | 23 | get_institution_spec + get_template AI SDK tools | ✅ | same | same | — | LLM can read spec and template on-demand during formatting |
 | 4 | 24 | Dynamic system prompt | ✅ | same | same | — | Injects institution name, structure, constants, and template file index |
+| 5 | 25 | Dual parser: PDF via pdf_oxide, DOCX via XML | ✅ | [spec](../superpowers/specs/2026-07-03-phase-5-dual-parser-design.md) | [plan](../superpowers/plans/2026-07-03-phase-5-dual-parser.md) | 8 | Replaces kreuzberg/xberg with pdf_oxide + zip/quick-xml/roxmltree; multi-signal heading detection; paragraph-boundary chunking |
+| 6 | 26 | Fix: LLM-accessible extraction | ✅ | [spec](../superpowers/specs/2026-07-03-phase-6-llm-extraction-fix.md) | — | — | Tool returns headings not raw text; new get_document_chunks; slim upload message; confirm-first workflow |
+| 7 | 27 | Fix: extraction store resilience | ✅ | — | — | — | File-based fallback survives HMR resets; PUT response checked; sessionId added to useCallback deps |
+| 8 | — | Chat flow end-to-end testing | ⬜ | — | — | — | Provision REALLMS key; full upload→extract→confirm→spec→template→chunks→compile→validate→iterate |
 
 (End of file — total 31 lines)
