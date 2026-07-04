@@ -6,9 +6,7 @@ use crate::error::AppError;
 
 pub async fn compile(typst_code: &str, root: Option<&Path>) -> Result<Vec<u8>, AppError> {
     let mut cmd = tokio::process::Command::new("typst");
-    cmd.arg("compile")
-        .arg("--format")
-        .arg("pdf");
+    cmd.arg("compile").arg("--format").arg("pdf");
 
     if let Some(root) = root {
         cmd.arg("--root").arg(root);

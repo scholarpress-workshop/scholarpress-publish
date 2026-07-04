@@ -33,10 +33,7 @@ pub async fn handler(
         .get(&id)
         .ok_or_else(|| AppError::InstitutionNotFound(id.clone()))?;
 
-    let checks = institution
-        .spec
-        .get("checks")
-        .and_then(|c| c.as_sequence());
+    let checks = institution.spec.get("checks").and_then(|c| c.as_sequence());
 
     let (automated, human) = if let Some(checks) = checks {
         let automated = checks
