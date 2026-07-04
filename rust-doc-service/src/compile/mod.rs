@@ -1,12 +1,20 @@
 pub mod template;
 
+use std::path::Path;
+
 use crate::error::AppError;
 
-pub async fn compile(typst_code: &str) -> Result<Vec<u8>, AppError> {
-    let mut child = tokio::process::Command::new("typst")
-        .arg("compile")
+pub async fn compile(typst_code: &str, root: Option<&Path>) -> Result<Vec<u8>, AppError> {
+    let mut cmd = tokio::process::Command::new("typst");
+    cmd.arg("compile")
         .arg("--format")
-        .arg("pdf")
+        .arg("pdf");
+
+    if let Some(root) = root {
+        cmd.arg("--root").arg(root);
+    }
+
+    let mut child = cmd
         .arg("-")
         .arg("-")
         .stdin(std::process::Stdio::piped())
@@ -47,7 +55,7 @@ mod tests {
 #set text(font: "Times New Roman", size: 12pt)
 Hello, world!
 "#;
-        let result = compile(code).await;
+        let result = compile(code, None).await;
         assert!(result.is_ok(), "compile failed: {:?}", result.err());
         let pdf = result.unwrap();
         assert!(
@@ -61,7 +69,7 @@ Hello, world!
         let code = r#"
 #this is not valid typst
 "#;
-        let result = compile(code).await;
+        let result = compile(code, None).await;
         assert!(result.is_err());
         match result {
             Err(AppError::Compilation(msg)) => assert!(!msg.is_empty()),

@@ -34,7 +34,8 @@ One round = one testable feature delivered end-to-end.
 | 5 | 25 | Dual parser: PDF via pdf_oxide, DOCX via XML | ✅ | [spec](../superpowers/specs/2026-07-03-phase-5-dual-parser-design.md) | [plan](../superpowers/plans/2026-07-03-phase-5-dual-parser.md) | 8 | Replaces kreuzberg/xberg with pdf_oxide + zip/quick-xml/roxmltree; multi-signal heading detection; paragraph-boundary chunking |
 | 6 | 26 | Fix: LLM-accessible extraction | ✅ | [spec](../superpowers/specs/2026-07-03-phase-6-llm-extraction-fix.md) | — | — | Tool returns headings not raw text; new get_document_chunks; slim upload message; confirm-first workflow |
 | 7 | 27 | Fix: extraction store resilience | ✅ | — | — | — | File-based fallback survives HMR resets; PUT response checked; sessionId added to useCallback deps |
-| 7 | 28 | Fix: system prompt workflow directive | ✅ | — | — | — | Explicit continuations after tool calls (do not stop); spec tool returns full checks not just summary |
+| 7 | 28 | Fix: system prompt workflow directive | ✅ | — | — | — | Explicit continuations after tool calls; spec tool returns full checks not just summary |
+| 7 | 29 | Fix: tool loop + compile import resolution | ✅ | — | — | — | streamText isStepCount(1→10) so LLM sees tool results; compile --root for Typst imports |
 | 8 | — | Chat flow end-to-end testing | ⬜ | — | — | — | Provision REALLMS key; full upload→extract→confirm→spec→template→chunks→compile→validate→iterate |
 
 (End of file — total 31 lines)

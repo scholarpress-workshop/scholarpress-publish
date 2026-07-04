@@ -21,7 +21,7 @@ pub async fn handler(
     Query(params): Query<CompileParams>,
     Json(req): Json<CompileRequest>,
 ) -> Result<Vec<u8>, AppError> {
-    let _institution = registry
+    let institution = registry
         .get(&params.institution)
         .ok_or_else(|| AppError::InstitutionNotFound(params.institution.clone()))?;
 
@@ -31,6 +31,6 @@ pub async fn handler(
         req.typst_code.clone()
     };
 
-    let pdf = compile::compile(&code).await?;
+    let pdf = compile::compile(&code, Some(&institution.template_dir)).await?;
     Ok(pdf)
 }
