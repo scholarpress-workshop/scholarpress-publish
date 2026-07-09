@@ -27,6 +27,8 @@ async fn test_extract_pdf() {
     assert!(body.get("content").is_some());
     assert!(body.get("structure").is_some());
     assert!(body.get("metadata").is_some());
+    assert!(body["structure"].get("headings").is_some());
+    assert!(body["metadata"].get("page_count_estimated").is_some());
 }
 
 async fn start_test_server() -> SocketAddr {
