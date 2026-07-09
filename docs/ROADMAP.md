@@ -1,8 +1,6 @@
 # Roadmap — format-my-dissertation
 
-**Updated:** 2026-07-09 (Phase 10 — full-width line margin checking)
-
-**Current round:** 41 — Full-width line margin checking
+**Updated:** 2026-07-09 (Phase 10 complete)
 
 One round = one testable feature delivered end-to-end.
 
@@ -48,5 +46,5 @@ One round = one testable feature delivered end-to-end.
 | 9 | 37 | investigate: ScholarWorks margin calibration | ✅ | — | — | — | Tested 3 real IU dissertations against template. All 3 real docs fail margin checks (consistent with diss-check calibration). Template margins correctly set at 1.25in/1in — FAILs are placeholder-content artifacts (centered headings/tables/figures skew body-text bbox measurement). Not a template bug. |
 | 9 | 38 | fix: references_heading_format false positive | ✅ | — | — | — | Resolved as side effect of bold removal — chapters and references both use regular-weight LibertinusSerif 12pt. Font subset prefix correctly stripped by normalize_family(). PASSes. |
 | 9 | 39 | end-to-end template validation | ✅ | — | — | — | Final results: 31 PASS, 2 FAIL, 0 ERROR, 7 MANUAL. 2 FAILs are global_margins + margin_symmetry (confirmed placeholder-content bbox artifacts per ScholarWorks calibration; real body text resolves). Zero compile warnings. All structural, typographic, content, and section-detection checks pass. |
-| 10 | 40 | Cluster-based margin checking | ❌ | [spec](../superpowers/specs/2026-07-09-cluster-margin-checking-design.md) | [plan](../superpowers/plans/2026-07-09-cluster-margin-checking.md) | 15 | FAILED — clustering picks centered-content cluster on sparse pages; worse than percentile. To be reverted. |
-| 10 | 41 | Full-width line margin checking | 🚧 | [spec](../superpowers/specs/2026-07-09-fullwidth-line-margin-checking-design.md) | [plan](../superpowers/plans/2026-07-09-fullwidth-line-margin-checking.md) | — | Reconstruct lines from spans, filter to full-width (body) lines only, 5th percentile on clean data. Revert Round 40 clustering. |
+| 10 | 40 | Cluster-based margin checking | ❌ | [spec](../superpowers/specs/2026-07-09-cluster-margin-checking-design.md) | [plan](../superpowers/plans/2026-07-09-cluster-margin-checking.md) | — | FAILED — clustering picks centered-content cluster on sparse pages; worse than percentile. Reverted. |
+| 10 | 41 | Full-width line margin checking | ✅ | [spec](../superpowers/specs/2026-07-09-fullwidth-line-margin-checking-design.md) | [plan](../superpowers/plans/2026-07-09-fullwidth-line-margin-checking.md) | 11 | Reconstruct lines from spans, filter to x1>=80% page width (full-width body lines), global 5th percentile on cleaned data. Left/right margins correctly measured at 90pt. 89 tests pass, 0 warnings. |
