@@ -1,6 +1,6 @@
 # Roadmap — format-my-dissertation
 
-**Updated:** 2026-07-09 (Phase 10 complete)
+**Updated:** 2026-07-09 (Phase 11 — ScholarPress ecosystem complete)
 
 One round = one testable feature delivered end-to-end.
 
@@ -49,3 +49,4 @@ One round = one testable feature delivered end-to-end.
 | 10 | 40 | Cluster-based margin checking | ❌ | [spec](../superpowers/specs/2026-07-09-cluster-margin-checking-design.md) | [plan](../superpowers/plans/2026-07-09-cluster-margin-checking.md) | — | FAILED — clustering picks centered-content cluster on sparse pages; worse than percentile. Reverted. |
 | 10 | 41 | Full-width line margin checking | ✅ | [spec](../superpowers/specs/2026-07-09-fullwidth-line-margin-checking-design.md) | [plan](../superpowers/plans/2026-07-09-fullwidth-line-margin-checking.md) | 11 | Reconstruct lines from spans, filter to x1>=70% page width (full-width body lines), global 5th percentile on cleaned data. Left/right margins correctly measured at 90pt on template-test. 93 tests pass. |
 | 10 | 42 | Synthetic margin test suite | ✅ | [spec](../superpowers/specs/2026-07-09-synthetic-margin-test-suite-design.md) | [plan](../superpowers/plans/2026-07-09-synthetic-margin-test-suite.md) | 4 | 10 synthetic PDFs with deliberate margin variations. Integration tests assert correct FAIL for wrong margins, correct measurements for correct margins. Threshold lowered from 0.8→0.7 for wide margin support. |
+| 11 | 43 | ScholarPress ecosystem migration | ✅ | [spec](../superpowers/specs/2026-07-09-scholarpress-ecosystem-architecture.md) | [plan](../superpowers/plans/2026-07-09-scholarpress-ecosystem-migration.md) | 92 | 6-phase non-breaking migration. catalog (data), check (validation lib), publish (app), cli (unified binary). Institution content co-located under catalog/institutions/iu/. |
